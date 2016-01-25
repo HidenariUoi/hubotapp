@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset='utf-8'>
@@ -24,11 +24,10 @@
 
 		$(function (){
 			$('#greet').click(function (){
-				$.getJson('http://localhost:8080/api/first', {
-					//name: $('#name').val()
-				}, function(data){
+				$.getJSON('http://localhost:8080/api/first', 
+					function(data){
 					$('#result').html(data.a)
-				})
+				});
 			});
 		});
 	</script>

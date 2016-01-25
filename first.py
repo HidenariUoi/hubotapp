@@ -14,7 +14,8 @@ def get_json():
 
 @route('/app', method='GET')
 def static():
-	return static_file('../index.html', root=BASE_DIR)
+	print BASE_DIR
+	return static_file('index.html', root=os.path.join(BASE_DIR, 'hubotapp'))
 
 
 run(host='localhost', port=8080, debug=True, reloader=True)
